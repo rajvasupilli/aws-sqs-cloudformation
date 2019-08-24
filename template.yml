@@ -7,6 +7,6 @@ Resources:
     Type: AWS::SQS::Queue
     Properties:
       QueueName: my-simple-queue
-      ReceiveMessageWaitTimeSeconds: 10
+      ReceiveMessageWaitTimeSeconds: 20
       MessageRetentionPeriod: 345600
       VisibilityTimeout: 300
