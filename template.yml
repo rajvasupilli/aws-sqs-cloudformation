@@ -11,7 +11,7 @@ Resources:
   SimpleQueue:
     Type: AWS::SQS::Queue
     Properties:
-      QueueName: "my-simple-queue-${AliasName}"
+      QueueName: !Sub my-simple-queue-${AliasName}
       ReceiveMessageWaitTimeSeconds: 5
       MessageRetentionPeriod: 60
       VisibilityTimeout: 300
