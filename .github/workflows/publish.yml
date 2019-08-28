@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: mgenteluci/cloudformation-deploy-action@v1.3.0-beta.1
+    - uses: mgenteluci/cloudformation-deploy-action@v1.3.0
       env:
         AWS_STACK_NAME: 'my-simple-stack'
         AWS_REGION: 'us-east-1'
