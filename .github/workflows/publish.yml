@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: mgenteluci/cloudformation-deploy-action@v1.2.0
+    - uses: mgenteluci/cloudformation-deploy-action@v1.3.0-beta.1
       env:
         AWS_STACK_NAME: 'my-simple-stack'
         AWS_REGION: 'us-east-1'
@@ -17,4 +17,4 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
         AWS_DEPLOY_BUCKET: ${{secrets.AWS_DEPLOY_BUCKET}}
         AWS_BUCKET_PREFIX: stacks/sqs
-        FORCE_UPLOAD: true
+        PARAMETER_OVERRIDES: AliasName=prod
